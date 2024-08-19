@@ -1,0 +1,15 @@
+/* App.css */
+body {
+  transition: background-color 1000ms, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+
+.App-header {
+  text-align: center;
+  margin-top: 50px;
+}

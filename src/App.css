@@ -1,0 +1,12 @@
+.App-header h1{
+  position: absolute;
+  left:0;
+  bottom: 0;
+  margin:0px;
+  text-align:left;
+  color: white;
+  mix-blend-mode: difference;
+  z-index: 2;
+  font: 200px "Uncut Sans", sans-serif;
+}
+/* uncut sans */
