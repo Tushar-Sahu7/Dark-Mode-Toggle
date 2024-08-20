@@ -1,15 +1,28 @@
 // App.js
-import React from 'react';
-import DarkModeToggle from './component/DarkModeToggle';
-import './App.css'; // Make sure to create this file for custom styles
+import React, { useState } from "react";
+import DarkModeToggle from "./components/DarkModeToggle";
+import Preloaders from "./components/Preloaders";
+import "./App.css"; // Make sure to create this file for custom styles
+
 
 const App = () => {
+
+  const [loading, setLoading] = useState(true);
+
+const handleComplete = () => {
+  setLoading(false);
+};
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Dark Mode Toggle</h1>
-        <DarkModeToggle/>
-        
+      {loading && <Preloaders onComplete={handleComplete} />}
+        {!loading && (
+          <div>
+            <h1>Dark Mode Toggle</h1>
+            <DarkModeToggle />
+          </div>
+        )}
       </header>
     </div>
   );
