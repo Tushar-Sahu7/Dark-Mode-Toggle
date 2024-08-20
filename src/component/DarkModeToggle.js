@@ -1,8 +1,5 @@
 // DarkModeToggle.js
 import React, { useState, useEffect } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faToggleOn, faToggleOff } from "@fortawesome/free-solid-svg-icons";
-// import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 import "./DarkMode.css";
 
 const DarkModeToggle = () => {
@@ -23,7 +20,7 @@ const DarkModeToggle = () => {
       document.querySelector(".toggle-switch").classList.remove("active");
     }
   }, [darkMode]);
-  
+
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
