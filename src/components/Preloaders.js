@@ -7,7 +7,7 @@ const Preloaders = ({ onComplete }) => {
 
   useEffect(() => {
     const countTween = gsap.to({}, {
-      duration: 3,
+      duration: 2,
       onUpdate: () => {
         const progress = countTween.progress();
         const newCount = Math.round(progress * 100);
@@ -26,8 +26,7 @@ const Preloaders = ({ onComplete }) => {
     });
 
     tl.add(countTween)
-      .to({}, { duration: 1 }) // Add a delay of 1 second
-      .to(preloaderRef.current, { y: "-100%", duration: 1 });
+      .to(preloaderRef.current, { y: "-100%", duration: 0.5 });
 
     return () => {
       countTween.kill();
@@ -48,12 +47,13 @@ const styles = {
     height: "100vh",
     width: "100vw",
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
     backgroundColor: "black",
     color: "white",
-    fontSize: "200px",
-    fontFamily: "Arial, sans-serif",
+    fontSize: "250px",
+    fontFamily: "Anton",
+    paddingRight: "10px",
     position: "fixed",
     top: 0,
     left: 0,
